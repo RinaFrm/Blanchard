@@ -15,6 +15,6 @@ document.addEventListener("click", function(e) {
   if (!target.closest(".header__search")) {
   form.classList.remove("header__search-form__active");
   document.querySelector(".header__search-btn").classList.remove("active");
-    form.querySelector("header__form-input").value = "";
+    form.querySelector("header__form-input");
   }
 })
