@@ -17,14 +17,16 @@
   <header class="header">
     <section class="header__top">
       <div class="container header__container">
-        <button class="header__burger">
-          <svg width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699951)" fill="white"/>
-            <path d="M28.2002 12.8738H0.00019455V16.526H28.2002V12.8738Z" fill="white"/>
-            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
-          </svg>
-        </button>
-        <a href="/" class="header__logo">
+        <div class="burger__container">
+          <button class="header__burger" tabindex="0">
+            <svg width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699951)" fill="white"/>
+              <path d="M28.2002 12.8738H0.00019455V16.526H28.2002V12.8738Z" fill="white"/>
+              <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+            </svg>
+          </button>
+        </div>
+        <a href="/" class="header__logo" tabindex="-1">
           <img src="/img/header-logo.svg" alt="Логотип сайта Blanchard">
         </a>
         <nav class="header__nav">
@@ -514,8 +516,14 @@
       </p>
       <div class="catalog__content">
         <div class="catalog__left-part">
-          <div class="tab-content__item js-tab-content active"  data-tab="2">
-            <img src="/img/catalog-dominico.webp" alt="Доменико Гирландайо">
+          <div class="tab-content__item js-tab-content active" data-tab="2">
+            <picture>
+              <source media="(min-width: 1600px)" srcset="/img/catalog-dominico.webp">
+              <source media="(min-width: 1024px)" srcset="/img/catalog1024-dominico.webp">
+              <source media="(min-width: 768px)" srcset="/img/catalog768-dominico.webp">
+              <source media="(min-width: 320px)" srcset="/img/catalog320-dominico.webp">
+              <img src="/img/catalog-dominico.webp" alt="Доменико Гирландайо">
+            </picture>
             <h3 class="tab-content__title">
               Доменико Гирландайо
             </h3>
@@ -855,7 +863,13 @@
         <div class="events__swiper">
           <div class="swiper-wrapper events__swiper-wrapper">
             <div class="swiper-slide events__swiper-slide">
-              <img src="/img/events-slide-1.webp" alt="" class="events__swiper-slide-img">
+              <picture class="events__swiper-slide-img">
+                <source media="(min-width: 1600px)" srcset="/img/events-slide-1.webp">
+                <source media="(min-width: 1024px)" srcset="/img/events1024-slide1.webp">
+                <source media="(min-width: 768px)" srcset="/img/events768-slide1.webp">
+                <source media="(min-width: 320px)" srcset="/img/events320-slide1.webp">
+                <img src="/img/events-slide-1.webp" alt="">
+              </picture>
               <div class="slide__content">
                 <div class="slide__content-text">
                   <span class="slide-img-desc">
@@ -874,7 +888,13 @@
               </div>
             </div>
             <div class="swiper-slide events__swiper-slide">
-              <img src="/img/events-slide-2.webp" alt="" class="events__swiper-slide-img">
+              <picture class="events__swiper-slide-img">
+                <source media="(min-width: 1600px)" srcset="/img/events-slide-2.webp">
+                <source media="(min-width: 1024px)" srcset="/img/events1024-slide2.webp">
+                <source media="(min-width: 768px)" srcset="/img/events768-slide2.webp">
+                <source media="(min-width: 320px)" srcset="/img/events320-slide2.webp">
+                <img src="/img/events-slide-2.webp" alt="">
+              </picture>
               <div class="slide__content">
                 <div class="slide__content-text">
                   <span class="slide-img-desc">
@@ -893,7 +913,13 @@
               </div>
             </div>
             <div class="swiper-slide events__swiper-slide">
-              <img src="/img/events-slide-3.webp" alt="" class="events__swiper-slide-img">
+              <picture class="events__swiper-slide-img">
+                <source media="(min-width: 1600px)" srcset="/img/events-slide-3.webp">
+                <source media="(min-width: 1024px)" srcset="/img/events1024-slide3.webp">
+                <source media="(min-width: 768px)" srcset="/img/events768-slide3.webp">
+                <source media="(min-width: 320px)" srcset="/img/events320-slide3.webp">
+                <img src="/img/events-slide-3.webp" alt="">
+              </picture>
               <div class="slide__content">
                 <div class="slide__content-text">
                   <span class="slide-img-desc">
@@ -912,7 +938,13 @@
               </div>
             </div>
             <div class="swiper-slide events__swiper-slide">
-              <img src="/img/events-slide-4.webp" alt="" class="events__swiper-slide-img">              
+              <picture class="events__swiper-slide-img">
+                <source media="(min-width: 1600px)" srcset="/img/events-slide-4.webp">
+                <source media="(min-width: 1024px)" srcset="/img/events1024-slide4.webp">
+                <source media="(min-width: 768px)" srcset="/img/events768-slide4.webp">
+                <source media="(min-width: 320px)" srcset="/img/events320-slide4.webp">
+                <img src="/img/events-slide-4.webp" alt="">
+              </picture>              
               <div class="slide__content">
                 <div class="slide__content-text">
                   <span class="slide-img-desc" style="max-width: 100%">
@@ -931,7 +963,13 @@
               </div>
             </div>
             <div class="swiper-slide events__swiper-slide">
-              <img src="/img/events-slide-5.webp" alt="" class="events__swiper-slide-img">
+              <picture class="events__swiper-slide-img">
+                <source media="(min-width: 1600px)" srcset="/img/events-slide-5.webp">
+                <source media="(min-width: 1024px)" srcset="/img/events1024-slide5.webp">
+                <source media="(min-width: 768px)" srcset="/img/events768-slide5.webp">
+                <source media="(min-width: 320px)" srcset="/img/events320-slide5.webp">
+                <img src="/img/events-slide-5.webp" alt="">
+              </picture>
               <div class="slide__content">
                 <div class="slide__content-text">
                   <span class="slide-img-desc">
@@ -1006,31 +1044,31 @@
         <div class="projects__swiper">
           <div class="swiper-wrapper projects__swiper-wrapper">
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-1.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-1.webp" alt="Логотип Freelands Foundation">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-2.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-2.webp" alt="Логотип Institute for Contamporary Art">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-3.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-3.webp" alt="Логотип Workhouse">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-4.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-4.webp" alt="Логотип 1849">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-5.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-5.webp" alt="Логотип Hiscox">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-6.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-6.webp" alt="Логотип Camden">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-7.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-7.webp" alt="Логотип Strassen">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-8.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-8.webp" alt="Логотип Watts Gallery">
             </div>
             <div class="swiper-slide projects__swiper-slide">
-              <img class="projects__swiper-slide-img" src="/img/projects-slide-9.png" alt="">
+              <img class="projects__swiper-slide-img" src="/img/projects-slide-9.webp" alt="Логотип eSAD">
             </div>
           </div>
         </div>
@@ -1111,7 +1149,7 @@
   </section>
   <footer class="footer">
     <div class="container footer__container">
-      <a href="/" class="footer__logo">
+      <a href="/" class="footer__logo" tabindex="-1">
         <img src="/img/header-logo.svg" alt="Логотип сайта Blanchard">
       </a>
       <ul class="footer__social-list">
@@ -1143,7 +1181,7 @@
   </footer>
 
   <script src="/js/dropdown.js"></script>
-  
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="/js/simplebar.js"></script>
   <script src="/js/choices.min.js"></script>
   <script src="/js/select.js"></script>

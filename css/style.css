@@ -390,83 +390,83 @@ h3 {
 
 
 .dropdown__tintoretto {
-  background-image: url(/img/menu-tintoretto.jpg);
+  background-image: url(/img/menu-tintoretto.webp);
 }
 
 .dropdown__friedrich {
-  background-image: url(/img/menu-friedrich.jpg);
+  background-image: url(/img/menu-friedrich.webp);
 }
 
 .dropdown__leonardo {
-  background-image: url(/img/menu-leonardo.jpg);
+  background-image: url(/img/menu-leonardo.webp);
 }
 
 .dropdown__verocchio {
-  background-image: url(/img/menu-verrocchio.jpg);
+  background-image: url(/img/menu-verrocchio.webp);
 }
 
 .dropdown__monet {
-  background-image: url(/img/menu-monet.jpg);
+  background-image: url(/img/menu-monet.webp);
 }
 
 .dropdown__sisley {
-  background-image: url(/img/menu-sisley.jpg);
+  background-image: url(/img/menu-sisley.webp);
 }
 
 .dropdown__manet {
-  background-image: url(/img/menu-manet.jpg);
+  background-image: url(/img/menu-manet.webp);
 }
 
 .dropdown__renoir {
-  background-image: url(/img/menu-renoir.jpg);
+  background-image: url(/img/menu-renoir.webp);
 }
 
 .dropdown__vangogh {
-  background-image: url(/img/menu-vangogh.jpg);
+  background-image: url(/img/menu-vangogh.webp);
 }
 
 .dropdown__cezanne {
-  background-image: url(/img/menu-cezanne.jpg);
+  background-image: url(/img/menu-cezanne.webp);
 }
 
 .dropdown__gauguin {
-  background-image: url(/img/menu-gauguin.jpg);
+  background-image: url(/img/menu-gauguin.webp);
 }
 
 .dropdown__seurat {
-  background-image: url(/img/menu-seurat.jpg);
+  background-image: url(/img/menu-seurat.webp);
 }
 
 .dropdown__kandinsky {
-  background-image: url(/img/menu-kandinsky.jpg);
+  background-image: url(/img/menu-kandinsky.webp);
 }
 
 .dropdown__marinetti {
-  background-image: url(/img/menu-marinetti.jpg);
+  background-image: url(/img/menu-marinetti.webp);
 }
 
 .dropdown__malevich {
-  background-image: url(/img/menu-malevich.jpg);
+  background-image: url(/img/menu-malevich.webp);
 }
 
 .dropdown__picasso {
-  background-image: url(/img/menu-picasso.jpg);
+  background-image: url(/img/menu-picasso.webp);
 }
 
 .dropdown__carra {
-  background-image: url(/img/menu-carra.jpg);
+  background-image: url(/img/menu-carra.webp);
 }
 
 .dropdown__pratella {
-  background-image: url(/img/menu-pratella.jpg);
+  background-image: url(/img/menu-pratella.webp);
 }
 
 .dropdown__severini {
-  background-image: url(/img/menu-severini.jpg);
+  background-image: url(/img/menu-severini.webp);
 }
 
 .dropdown__balla {
-  background-image: url(/img/menu-balla.jpg);
+  background-image: url(/img/menu-balla.webp);
 }
 
 .active-menu__list-item {
@@ -667,7 +667,7 @@ h3 {
 
 .gallery {
   min-height: 595px;
-  background-image: url(/img/gallery-background.jpg);
+  background-image: url(/img/gallery-background.webp);
   background-size: cover;
 }
 
@@ -1023,7 +1023,7 @@ select {
   flex-direction: column;
 }
 
-.tab-content__item img {
+.tab-content__item picture {
   width: 100%;
   max-height: 470px;
   margin-bottom: 30px;
@@ -1931,9 +1931,37 @@ select {
     display: flex;
   }
 
-  .header__burger {
+  .burger__container {
     flex: 1 1 40%;
     padding-left: 1px;
+  }
+
+  .header__burger svg {
+    transition: fill .3s ease-in-out;
+  }
+
+  .header__burger:focus svg path {
+    fill: var(--color-ametist);
+  }
+
+  .header__burger:focus svg rect {
+    fill: var(--color-ametist);
+  }
+
+  .header__burger:hover svg path {
+    fill: var(--color-ametist);
+  }
+
+  .header__burger:hover svg rect {
+    fill: var(--color-ametist);
+  }
+
+  .header__burger:active svg path {
+    fill: var(--color-royalPurple);
+  }
+
+  .header__burger:active svg rect {
+    fill: var(--color-royalPurple);
   }
 
   .header__nav-close svg rect {
@@ -2161,6 +2189,7 @@ select {
 
   .gallery {
     min-height: 560px;
+    background-image: url(/img/gallery1024-background.webp);
   }
 
   .choices__inner {
@@ -2353,7 +2382,7 @@ select {
     flex: 0 0 34%;
   }
 
-  .header__burger {
+  .burger__container {
     flex: 0 0 34%;
     z-index: 1;
   }
@@ -2424,7 +2453,6 @@ select {
   }
 
   /*about*/
-
   .about {
     min-height: 583px;
   }
@@ -2434,6 +2462,9 @@ select {
   }
 
   /*gallery*/
+  .gallery {
+    background-image: url(/img/gallery768-background.webp);
+  }
 
   .gallery__container {
     flex-direction: column;
@@ -2660,8 +2691,8 @@ select {
   }
 
   .header__container {
-    padding-top: 13px;
-    padding-bottom: 14px;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
   }
 
   .header__nav {
@@ -2700,16 +2731,8 @@ select {
 
   .header__search {
     height: 75px;
-    width: 320px;
-    padding-right: 15px;
-    padding-left: 15px;
     left: 0px;
     z-index: 0;
-  }
-
-  .header__search-container {
-    width: 320px;
-    left: -15px;
   }
 
   .header__search-btn {
@@ -2722,14 +2745,14 @@ select {
   }
 
   .header__form-input {
-    max-width: 180px;
-    left: 76px;
+    max-width: 57%;
+    left: -12%;
     top: 35px;
   }
 
   .header__form-btn {
-   left: 95px;
-   top: 30%;
+   left: -5%;
+   top: 35%;
    transition: top .3s ease-in-out;
   }
 
@@ -2738,9 +2761,13 @@ select {
     width: 15px;
   }
 
+  .header__search-form__active {
+    transform: translateX(0);
+  }
+
   .header__search-btn.active {
     top: 55%;
-    transform: translateX(-230px);
+    transform: translateX(-700%);
   }
 
   /*hero*/
@@ -2749,15 +2776,15 @@ select {
   }
 
   .hero__swiper-slide:nth-child(1) {
-    background-image: url(/img/hero320-slide1.jpg);
+    background-image: url(/img/hero320-slide1.webp);
   }
   
   .hero__swiper-slide:nth-child(2) {
-    background-image: url(/img/hero320-slide2.jpg);
+    background-image: url(/img/hero320-slide2.webp);
   }
   
   .hero__swiper-slide:nth-child(3) {
-    background-image: url(/img/hero320-slide3.jpg);
+    background-image: url(/img/hero320-slide3.webp);
   }
 
   .hero__container {
@@ -2792,6 +2819,10 @@ select {
   }
 
   /*gallery*/
+  .gallery {
+    background-image: url(/img/gallery320-background.webp);
+  }
+
   .gallery__left-part {
     margin-right: 0px;
   }
