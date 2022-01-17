@@ -749,6 +749,10 @@ select {
   background-color: transparent;
 }
 
+.choices__list--dropdown .choices__list .is-selected {
+  display: none;
+}
+
 .choices__placeholder {
   opacity: 1;
 }
@@ -1991,6 +1995,7 @@ select {
     display: block;
     position: absolute;
     min-height: 768px;
+    visibility: hidden;
     top: 0;
     left: 0;
     bottom: 0;
@@ -2004,6 +2009,7 @@ select {
   }
 
   .header__nav.active {
+    visibility: visible;
     transform: translateX(0);
     opacity: 1;
   }
