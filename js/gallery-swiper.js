@@ -140,3 +140,21 @@ var slider3 = new Swiper (".gallery__swiper-3", {
   }
 });
 
+let swiperSlides = document.querySelector(".gallery").querySelectorAll(".swiper-slide");
+let modal = document.querySelector(".gallery__modal-part");
+let modalBtn = modal.querySelector(".modal-content-right-close");
+
+swiperSlides.forEach(el => {
+  el.addEventListener("click", function() {
+    let img = this.querySelector("img");
+    let link = img.getAttribute("src");
+    console.log(modal.querySelector("img"));
+    document.body.style.overflow = "hidden";
+    modal.classList.add("modal-active");
+    modal.querySelector("img").setAttribute("src", link);
+  })
+})
+modalBtn.addEventListener("click", function() {
+  modal.classList.remove("modal-active");
+  document.body.style.overflow = "";
+});
