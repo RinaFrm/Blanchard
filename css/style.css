@@ -1338,6 +1338,7 @@ select {
   z-index: 1;
   cursor: pointer;
   padding: 0;
+  scroll-behavior: smooth;
   text-align: left;
   border: 1px solid transparent;
   color: var(--color-grayUmber);

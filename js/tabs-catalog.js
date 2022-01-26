@@ -1,5 +1,6 @@
 var jsTriggers = document.querySelectorAll('.js-tab-trigger');
 
+
 jsTriggers.forEach(function(trigger) {
    trigger.addEventListener('click', function() {
       var id = this.getAttribute('data-tab'),
