@@ -91,8 +91,8 @@ var slider1 = new Swiper (".gallery__swiper", {
     }
   },
   a11y: {
-    prevSlideMessage: 'Предыдущий',
-    nextSlideMessage: 'Следующий',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   }
 });
 var slider2 = new Swiper (".gallery__swiper-2", {
@@ -133,8 +133,8 @@ var slider2 = new Swiper (".gallery__swiper-2", {
     }
   },
   a11y: {
-    prevSlideMessage: 'Предыдущий',
-    nextSlideMessage: 'Следующий',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   }
 });
 var slider3 = new Swiper (".gallery__swiper-3", {
@@ -175,8 +175,8 @@ var slider3 = new Swiper (".gallery__swiper-3", {
     }
   },
   a11y: {
-    prevSlideMessage: 'Предыдущий',
-    nextSlideMessage: 'Следующий',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   }
 });
 let swiperSlides = document.querySelector(".gallery").querySelectorAll(".swiper-slide");
@@ -244,8 +244,8 @@ var slider4 = new Swiper (".events__swiper", {
     }
   },
   a11y: {
-    prevSlideMessage: 'Предыдущий',
-    nextSlideMessage: 'Следующий',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   }
 });
 
@@ -289,12 +289,15 @@ var selector = document.querySelector("input[type='tel']");
     })
   }
   validateForms("#form", {  
-      name: {
-        required: true
-      }, 
-      tel: {
-        required: true
-      },
+    tel: "Недопустимый формат",
+    name: "Недопустимый формат"
+  }, {
+    name: {
+      required: true
+    }, 
+    tel: {
+      required: true
+    },
   }, 
   'send goal');
 
@@ -372,15 +375,17 @@ var slider5 = new Swiper (".projects__swiper", {
     }
   },
   a11y: {
-    prevSlideMessage: 'Предыдущий',
-    nextSlideMessage: 'Следующий',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   }
 });
 
 //scroll
-var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 600
-});
+
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 600
+  });
+
 
 //search
 document.querySelector(".header__search-btn").addEventListener("click", function() {
