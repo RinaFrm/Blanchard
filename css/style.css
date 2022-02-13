@@ -1278,12 +1278,8 @@ select {
   color: var(--color-ametist);
 }
 
-.catalog__right-part .ui-accordion-header-active .accordion__title {
+.ui-accordion-header-active .accordion__title {
   color: var(--color-royalPurple);
-}
-
-.accordion__btn:focus .accordion__title {
-  color: var(--color-white);
 }
 
 .accordion__btn svg {
@@ -1337,7 +1333,7 @@ select {
 }
 
 .panel__list-btn {
-  display: block;
+  display: inline-block;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -1568,7 +1564,7 @@ select {
 .slide-link:before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: 0px;
   bottom: -8px;
   left: -8px;
   right: -8px;
@@ -1792,7 +1788,16 @@ select {
   align-items: center;
   cursor: pointer;
   height: 100%;
-  border: 2px solid var(--color-pastelGray);
+  border: 1px solid var(--color-pastelGray);
+  transition: border-color .3s ease-in-out;
+}
+
+.projects__swiper-slide:focus {
+  border-color: var(--color-ametist);
+}
+
+.projects__swiper-slide:active {
+  border-color: var(--color-ametist);
 }
 
 .projects__swiper-slide img {
@@ -1803,6 +1808,11 @@ select {
 }
 
 .projects__swiper-slide:hover img {
+  opacity: 100%;
+  filter: grayscale(0);
+}
+
+.projects__swiper-slide:active img {
   opacity: 100%;
   filter: grayscale(0);
 }
@@ -2703,19 +2713,22 @@ select {
   }
 
   .tab-content-item picture {
-    height: 419px;
+    height: 100%;
   }
   
   .tab-content-item picture img {
     margin-left: auto;
     margin-right: auto;
-    width: auto;
   }
 }
 
 @media (max-width: 768px) {
-  /*header*/
 
+   body {
+    overflow-x: hidden;
+  }
+
+  /*header*/
   .header__top-container {
     justify-content: start;
   }
@@ -2855,6 +2868,10 @@ select {
     width: 100%;
   }
 
+  .modal-content-right-close {
+    top: 50px;
+  }
+
   /*catalog*/
 
   .catalog__container {
@@ -2880,16 +2897,6 @@ select {
 
   .panel__list {
     columns: 3 auto;
-  }
-
-  .tab-content-item picture {
-    height: 419px;
-  }
-
-  .tab-content-item picture img {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
   }
 
   .tab-content-title {
@@ -3540,7 +3547,7 @@ select {
   .contacts__form-input {
     height: 40px;
     padding: 4px 24px;
-    max-width: 290px;
+    width: 290px;
   }
 
   .contacts__form-item:not(:last-child) {
@@ -3587,5 +3594,24 @@ select {
 
   .footer__container {
     padding: 20px 0px 29px 0px;
+  }
+}
+
+@media (orientation: landscape) {
+  .header__nav-close {
+    margin-bottom: 10px;
+  }
+
+  .header__nav {
+    padding-bottom: 20px;
+  }
+
+  .header__nav-list {
+    height: 65%;
+    font-size: 20px;
+  }
+
+  .header__enter-btn {
+    padding: 10px 45px;
   }
 }
